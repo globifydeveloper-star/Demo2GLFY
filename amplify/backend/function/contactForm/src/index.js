@@ -4,8 +4,20 @@ exports.handler = async (event) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    const body = JSON.parse(event.body);
+let body = {};
 
+if (event.body) {
+  try {
+    body = typeof event.body === "string"
+      ? JSON.parse(event.body)
+      : event.body;
+  } catch (e) {
+    console.log("Invalid JSON:", event.body);
+  }
+}
+
+console.log("EVENT BODY:", event.body);
+console.log("PARSED BODY:", body);
     const {
       name,
       email,
