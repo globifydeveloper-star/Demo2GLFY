@@ -1,0 +1,3210 @@
+
+> globify-next@0.1.0 build
+> next build
+
+▲ Next.js 16.2.1 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 116 errors:
+./src/app/not-found.tsx:2:1
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+  [90m1 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'next/navigation'[0m;
+[31m[1m>[0m [90m2 |[0m [32m"use client"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mimport[0m { useEffect } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m
+
+Ecmascript file had an error
+
+
+./src/components/Navbar.tsx:2:1
+The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+  [90m1 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'next/navigation'[0m;
+[31m[1m>[0m [90m2 |[0m [32m"use client"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^[0m
+  [90m3 |[0m
+  [90m4 |[0m [36mimport[0m { useState, useRef, useEffect } [36mfrom[0m [32m"react"[0m;
+  [90m5 |[0m [36mimport[0m { motion, [33mAnimatePresence[0m } [36mfrom[0m [32m"framer-motion"[0m;
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+
+./src/app/technology/[slug]/page.tsx:4:21
+Unexpected token `,`. Expected identifier or string
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useParams, , [33mNavigate[0m } [36mfrom[0m [32m'react-router-dom'[0m;
+  [90m  |[0m                     [31m[1m^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m7 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle2[0m, [33mChevronRight[0m, [33mHelpCircle[0m } [36mfrom[0m [32m"lucide-react"[0m;
+
+Parsing ecmascript source code failed
+
+
+./src/app/sitemap.ts:13:11
+Unterminated template
+  [90m11 |[0m
+  [90m12 |[0m   [36mreturn[0m staticPages.map(url => ({
+[31m[1m>[0m [90m13 |[0m     url: \[32m`https://globify.ae\${url}\`,[0m
+  [90m   |[0m           [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m14 |[0m [32m    lastModified: new Date(),[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m [32m    changeFrequency: 'weekly',[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m16 |[0m [32m    priority: url === '' ? 1.0 : 0.8,[0m
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m17 |[0m [32m  }));[0m
+  [90m   |[0m [31m[1m^^^^^^[0m
+[31m[1m>[0m [90m18 |[0m [32m}[0m
+  [90m   |[0m [31m[1m^[0m
+[31m[1m>[0m [90m19 |[0m
+  [90m   |[0m [31m[1m^[0m
+
+Parsing ecmascript source code failed
+
+Import trace:
+  App Route:
+    ./src/app/sitemap.ts
+    ./src/app/sitemap--route-entry.js
+
+
+./src/app/not-found.tsx:4:10
+You're importing a module that depends on `useEffect` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+  [90m2 |[0m [32m"use client"[0m;
+  [90m3 |[0m
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { useEffect } [36mfrom[0m [32m"react"[0m;
+  [90m  |[0m          [31m[1m^^^^^^^^^[0m
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m [33mNotFound[0m = () => {
+  [90m7 |[0m   [36mconst[0m location = usePathname();
+
+Ecmascript file had an error
+
+
+./src/app/not-found.tsx:1:10
+You're importing a module that depends on `usePathname` into a React Server Component module. This API is only available in Client Components. To fix, mark the file (or its parent) with the `"use client"` directive.
+    Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'next/navigation'[0m;
+  [90m  |[0m          [31m[1m^^^^^^^^^^^[0m
+  [90m2 |[0m [32m"use client"[0m;
+  [90m3 |[0m
+  [90m4 |[0m [36mimport[0m { useEffect } [36mfrom[0m [32m"react"[0m;
+
+Ecmascript file had an error
+
+
+./src/components/Navbar.tsx:8:10
+the name `usePathname` is defined multiple times
+  [90m 6 |[0m [36mimport[0m { [33mMenu[0m, [33mX[0m, [33mChevronDown[0m, [33mGlobe[0m, [33mSmartphone[0m, [33mCpu[0m, [33mMegaphone[0m, [33mShoppingCart[0m, [33mDatabase[0m, [33mArrowRight[0m, [33mStethoscope[0m, [33mBarChart3[0m, [33mFactory[0m, [33mTruck[0m, [33mPackage[0m, [33mActivity[0m, [33mUsers[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m 7 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'react-router-dom'[0m;
+  [90m   |[0m          [31m[1m^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+  [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+
+Ecmascript file had an error
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+
+./src/app/about/page.tsx:10:1
+Module not found: Can't resolve '@/assets/agency-services.jpg'
+  [90m 8 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+  [90m 9 |[0m [36mimport[0m [33mCrossLinkSection[0m [36mfrom[0m [32m"@/components/CrossLinkSection"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m agencyImg [36mfrom[0m [32m"@/assets/agency-services.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m
+  [90m12 |[0m [36mconst[0m stats = [
+  [90m13 |[0m   { value: [32m"300+"[0m, label: [32m"AI-Powered Transformations"[0m },
+
+Import map: aliased to relative './src/assets/agency-services.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/about/page.tsx [Client Component Browser]
+    ./src/app/about/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/about/page.tsx [Client Component SSR]
+    ./src/app/about/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:20:1
+Module not found: Can't resolve '@/assets/clients/instarunway.png'
+  [90m18 |[0m [36mimport[0m [33mProcessSection[0m [36mfrom[0m [32m"@/components/ProcessSection"[0m;
+  [90m19 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+[31m[1m>[0m [90m20 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/instarunway.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:4:1
+Module not found: Can't resolve '@/assets/clients/instarunway.png'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/instarunway.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:4:1
+Module not found: Can't resolve '@/assets/clients/instarunway.png'
+  [90m2 |[0m
+  [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/instarunway.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:22:1
+Module not found: Can't resolve '@/assets/clients/isro.png'
+  [90m20 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m21 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/isro.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:6:1
+Module not found: Can't resolve '@/assets/clients/isro.png'
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/isro.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:6:1
+Module not found: Can't resolve '@/assets/clients/isro.png'
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/isro.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:28:1
+Module not found: Can't resolve '@/assets/clients/judith-leiber.png'
+  [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m27 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+[31m[1m>[0m [90m28 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m29 |[0m
+  [90m30 |[0m [36mconst[0m servicesClients = [
+  [90m31 |[0m   { name: [32m"Salomon"[0m, logo: salomonLogo },
+
+Import map: aliased to relative './src/assets/clients/judith-leiber.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:12:1
+Module not found: Can't resolve '@/assets/clients/judith-leiber.png'
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m
+  [90m14 |[0m [36mconst[0m clients = [
+  [90m15 |[0m   { name: [32m"Salomon"[0m, logo: salomonLogo },
+
+Import map: aliased to relative './src/assets/clients/judith-leiber.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:12:1
+Module not found: Can't resolve '@/assets/clients/judith-leiber.png'
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m
+  [90m14 |[0m [36mconst[0m clients = [
+  [90m15 |[0m   { name: [32m"Salomon"[0m, logo: salomonLogo },
+
+Import map: aliased to relative './src/assets/clients/judith-leiber.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:23:1
+Module not found: Can't resolve '@/assets/clients/moher.png'
+  [90m21 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+[31m[1m>[0m [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/moher.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:7:1
+Module not found: Can't resolve '@/assets/clients/moher.png'
+  [90m 5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m 6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/moher.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:7:1
+Module not found: Can't resolve '@/assets/clients/moher.png'
+  [90m 5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m 6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/moher.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:24:1
+Module not found: Can't resolve '@/assets/clients/motoavenue.png'
+  [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+[31m[1m>[0m [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m27 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/motoavenue.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:8:1
+Module not found: Can't resolve '@/assets/clients/motoavenue.png'
+  [90m 6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/motoavenue.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:8:1
+Module not found: Can't resolve '@/assets/clients/motoavenue.png'
+  [90m 6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/motoavenue.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:25:1
+Module not found: Can't resolve '@/assets/clients/mr-start.png'
+  [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+[31m[1m>[0m [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m27 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m28 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/mr-start.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:9:1
+Module not found: Can't resolve '@/assets/clients/mr-start.png'
+  [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/mr-start.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:9:1
+Module not found: Can't resolve '@/assets/clients/mr-start.png'
+  [90m 7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/mr-start.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:27:1
+Module not found: Can't resolve '@/assets/clients/riad.png'
+  [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+[31m[1m>[0m [90m27 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m28 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m29 |[0m
+  [90m30 |[0m [36mconst[0m servicesClients = [
+
+Import map: aliased to relative './src/assets/clients/riad.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:11:1
+Module not found: Can't resolve '@/assets/clients/riad.png'
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m13 |[0m
+  [90m14 |[0m [36mconst[0m clients = [
+
+Import map: aliased to relative './src/assets/clients/riad.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:11:1
+Module not found: Can't resolve '@/assets/clients/riad.png'
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+  [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m13 |[0m
+  [90m14 |[0m [36mconst[0m clients = [
+
+Import map: aliased to relative './src/assets/clients/riad.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/salomon/page.tsx:13:1
+Module not found: Can't resolve '@/assets/clients/salomon.png'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m clientSalomon [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Multi-Language (EN/AR)"[0m, [32m"RTL Support"[0m, [32m"GCC Localization"[0m, [32m"Country Switcher"[0m, [32m"JavaScript"[0m, [32m"CDN Optimization"[0m, [32m"Performance Optimizat...[0m
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/clients/salomon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/salomon/page.tsx [Client Component Browser]
+    ./src/app/case-study/salomon/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/salomon/page.tsx [Client Component SSR]
+    ./src/app/case-study/salomon/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:21:1
+Module not found: Can't resolve '@/assets/clients/salomon.png'
+  [90m19 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m20 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m23 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/salomon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:5:1
+Module not found: Can't resolve '@/assets/clients/salomon.png'
+  [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/salomon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:15:1
+Module not found: Can't resolve '@/assets/clients/salomon.png'
+  [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+[31m[1m>[0m [90m15 |[0m [36mimport[0m clientSalomon [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m
+  [90m17 |[0m [36mconst[0m allCaseStudies = [
+  [90m18 |[0m   { slug: [32m"wilson"[0m, title: [32m"Wilson"[0m, category: [32m"E-Commerce"[0m, image: portfolioWilson, stat: [32m"500K+ Users"[0m },
+
+Import map: aliased to relative './src/assets/clients/salomon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:5:1
+Module not found: Can't resolve '@/assets/clients/salomon.png'
+  [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+  [90m7 |[0m [36mimport[0m moherLogo [36mfrom[0m [32m"@/assets/clients/moher.png"[0m;
+  [90m8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/salomon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:26:1
+Module not found: Can't resolve '@/assets/clients/telnys.png'
+  [90m24 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m25 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m28 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m29 |[0m
+
+Import map: aliased to relative './src/assets/clients/telnys.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:10:1
+Module not found: Can't resolve '@/assets/clients/telnys.png'
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m13 |[0m
+
+Import map: aliased to relative './src/assets/clients/telnys.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:10:1
+Module not found: Can't resolve '@/assets/clients/telnys.png'
+  [90m 8 |[0m [36mimport[0m motoavenueLogo [36mfrom[0m [32m"@/assets/clients/motoavenue.png"[0m;
+  [90m 9 |[0m [36mimport[0m mrStartLogo [36mfrom[0m [32m"@/assets/clients/mr-start.png"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m telnysLogo [36mfrom[0m [32m"@/assets/clients/telnys.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m riadLogo [36mfrom[0m [32m"@/assets/clients/riad.png"[0m;
+  [90m12 |[0m [36mimport[0m judithLeiberLogo [36mfrom[0m [32m"@/assets/clients/judith-leiber.png"[0m;
+  [90m13 |[0m
+
+Import map: aliased to relative './src/assets/clients/telnys.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:19:1
+Module not found: Can't resolve '@/assets/clients/wilson.png'
+  [90m17 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+  [90m18 |[0m [36mimport[0m [33mProcessSection[0m [36mfrom[0m [32m"@/components/ProcessSection"[0m;
+[31m[1m>[0m [90m19 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m20 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m21 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m22 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/wilson.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/ClientsSection.tsx:3:1
+Module not found: Can't resolve '@/assets/clients/wilson.png'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/wilson.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/ClientsSection.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Client Component Browser]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/ClientsSection.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Client Component SSR]
+    ./src/app/hire-developers/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevClients.tsx:3:1
+Module not found: Can't resolve '@/assets/clients/wilson.png'
+  [90m1 |[0m [32m"use client"[0m;
+  [90m2 |[0m
+[31m[1m>[0m [90m3 |[0m [36mimport[0m wilsonLogo [36mfrom[0m [32m"@/assets/clients/wilson.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m instarunwayLogo [36mfrom[0m [32m"@/assets/clients/instarunway.png"[0m;
+  [90m5 |[0m [36mimport[0m salomonLogo [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m6 |[0m [36mimport[0m isroLogo [36mfrom[0m [32m"@/assets/clients/isro.png"[0m;
+
+Import map: aliased to relative './src/assets/clients/wilson.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevClients.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/FAQSection.tsx:11:1
+Module not found: Can't resolve '@/assets/contact-support.png'
+  [90m 9 |[0m   [33mAccordionTrigger[0m,
+  [90m10 |[0m } [36mfrom[0m [32m"@/components/ui/accordion"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m contactSupportImg [36mfrom[0m [32m"@/assets/contact-support.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m
+  [90m13 |[0m [36mconst[0m faqs = [
+  [90m14 |[0m   {
+
+Import map: aliased to relative './src/assets/contact-support.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/FAQSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/FAQSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/web-dev/WebDevLeadCapture.tsx:9:1
+Module not found: Can't resolve '@/assets/contact-support.png'
+  [90m 7 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+  [90m 8 |[0m [36mimport[0m { submitLeadForm, extractFormFields } [36mfrom[0m [32m"@/lib/submitLeadForm"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m contactSupportImg [36mfrom[0m [32m"@/assets/contact-support.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m
+  [90m11 |[0m [36mconst[0m [33mWebDevLeadCapture[0m = () => {
+  [90m12 |[0m   [36mconst[0m { openContactDialog } = useContactDialog();
+
+Import map: aliased to relative './src/assets/contact-support.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/web-dev/WebDevLeadCapture.tsx [Client Component Browser]
+    ./src/app/web-development/page.tsx [Client Component Browser]
+    ./src/app/web-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/web-dev/WebDevLeadCapture.tsx [Client Component SSR]
+    ./src/app/web-development/page.tsx [Client Component SSR]
+    ./src/app/web-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Footer.tsx:6:1
+Module not found: Can't resolve '@/assets/globify-logo.png'
+  [90m4 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+  [90m5 |[0m
+[31m[1m>[0m [90m6 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m offices = [
+  [90m9 |[0m   {
+
+Import map: aliased to relative './src/assets/globify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Footer.tsx [Client Component Browser]
+    ./src/app/app-development/page.tsx [Client Component Browser]
+    ./src/app/app-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Footer.tsx [Client Component SSR]
+    ./src/app/app-development/page.tsx [Client Component SSR]
+    ./src/app/app-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:10:1
+Module not found: Can't resolve '@/assets/globify-logo.png'
+  [90m 8 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'react-router-dom'[0m;
+  [90m 9 |[0m
+[31m[1m>[0m [90m10 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+  [90m12 |[0m [36mimport[0m megaMenuServices [36mfrom[0m [32m"@/assets/mega-menu-services.jpg"[0m;
+  [90m13 |[0m [36mimport[0m megaMenuIndustries [36mfrom[0m [32m"@/assets/mega-menu-industries.jpg"[0m;
+
+Import map: aliased to relative './src/assets/globify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/IndustriesGridSection.tsx:8:1
+Module not found: Can't resolve '@/assets/industry-fintech.jpg'
+  [90m 6 |[0m
+  [90m 7 |[0m [36mimport[0m healthcareImg [36mfrom[0m [32m"@/assets/industry-healthcare.jpg"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m fintechImg [36mfrom[0m [32m"@/assets/industry-fintech.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m retailImg [36mfrom[0m [32m"@/assets/industry-retail.jpg"[0m;
+  [90m10 |[0m [36mimport[0m supplychainImg [36mfrom[0m [32m"@/assets/industry-supplychain.jpg"[0m;
+  [90m11 |[0m
+
+Import map: aliased to relative './src/assets/industry-fintech.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/IndustriesGridSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/IndustriesGridSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/IndustriesGridSection.tsx:7:1
+Module not found: Can't resolve '@/assets/industry-healthcare.jpg'
+  [90m 5 |[0m [36mimport[0m { [33mHeart[0m, [33mDollarSign[0m, [33mShoppingCart[0m, [33mSettings[0m, [33mArrowRight[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m 6 |[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m healthcareImg [36mfrom[0m [32m"@/assets/industry-healthcare.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m fintechImg [36mfrom[0m [32m"@/assets/industry-fintech.jpg"[0m;
+  [90m 9 |[0m [36mimport[0m retailImg [36mfrom[0m [32m"@/assets/industry-retail.jpg"[0m;
+  [90m10 |[0m [36mimport[0m supplychainImg [36mfrom[0m [32m"@/assets/industry-supplychain.jpg"[0m;
+
+Import map: aliased to relative './src/assets/industry-healthcare.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/IndustriesGridSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/IndustriesGridSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/IndustriesGridSection.tsx:9:1
+Module not found: Can't resolve '@/assets/industry-retail.jpg'
+  [90m 7 |[0m [36mimport[0m healthcareImg [36mfrom[0m [32m"@/assets/industry-healthcare.jpg"[0m;
+  [90m 8 |[0m [36mimport[0m fintechImg [36mfrom[0m [32m"@/assets/industry-fintech.jpg"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m retailImg [36mfrom[0m [32m"@/assets/industry-retail.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m supplychainImg [36mfrom[0m [32m"@/assets/industry-supplychain.jpg"[0m;
+  [90m11 |[0m
+  [90m12 |[0m [36mconst[0m industries = [
+
+Import map: aliased to relative './src/assets/industry-retail.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/IndustriesGridSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/IndustriesGridSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/IndustriesGridSection.tsx:10:1
+Module not found: Can't resolve '@/assets/industry-supplychain.jpg'
+  [90m 8 |[0m [36mimport[0m fintechImg [36mfrom[0m [32m"@/assets/industry-fintech.jpg"[0m;
+  [90m 9 |[0m [36mimport[0m retailImg [36mfrom[0m [32m"@/assets/industry-retail.jpg"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m supplychainImg [36mfrom[0m [32m"@/assets/industry-supplychain.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m
+  [90m12 |[0m [36mconst[0m industries = [
+  [90m13 |[0m   {
+
+Import map: aliased to relative './src/assets/industry-supplychain.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/IndustriesGridSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/IndustriesGridSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:13:1
+Module not found: Can't resolve '@/assets/mega-menu-industries.jpg'
+  [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+  [90m12 |[0m [36mimport[0m megaMenuServices [36mfrom[0m [32m"@/assets/mega-menu-services.jpg"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m megaMenuIndustries [36mfrom[0m [32m"@/assets/mega-menu-industries.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m [36mimport[0m megaMenuProducts [36mfrom[0m [32m"@/assets/mega-menu-products.jpg"[0m;
+  [90m15 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/mega-menu-industries.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:14:1
+Module not found: Can't resolve '@/assets/mega-menu-products.jpg'
+  [90m12 |[0m [36mimport[0m megaMenuServices [36mfrom[0m [32m"@/assets/mega-menu-services.jpg"[0m;
+  [90m13 |[0m [36mimport[0m megaMenuIndustries [36mfrom[0m [32m"@/assets/mega-menu-industries.jpg"[0m;
+[31m[1m>[0m [90m14 |[0m [36mimport[0m megaMenuProducts [36mfrom[0m [32m"@/assets/mega-menu-products.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m15 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+  [90m16 |[0m
+  [90m17 |[0m [90m// Defer mega menu image preloads so they don't compete with critical resources[0m
+
+Import map: aliased to relative './src/assets/mega-menu-products.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:12:1
+Module not found: Can't resolve '@/assets/mega-menu-services.jpg'
+  [90m10 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+  [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m megaMenuServices [36mfrom[0m [32m"@/assets/mega-menu-services.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m [36mimport[0m megaMenuIndustries [36mfrom[0m [32m"@/assets/mega-menu-industries.jpg"[0m;
+  [90m14 |[0m [36mimport[0m megaMenuProducts [36mfrom[0m [32m"@/assets/mega-menu-products.jpg"[0m;
+  [90m15 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+
+Import map: aliased to relative './src/assets/mega-menu-services.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:8:1
+Module not found: Can't resolve '@/assets/partners/aws.svg'
+  [90m 6 |[0m [36mimport[0m metaLogo [36mfrom[0m [32m"@/assets/partners/meta.svg"[0m;
+  [90m 7 |[0m [36mimport[0m mailchimpLogo [36mfrom[0m [32m"@/assets/partners/mailchimp.svg"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+  [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+  [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/aws.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:12:1
+Module not found: Can't resolve '@/assets/partners/cloudflare.svg'
+  [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+  [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m cloudflareLogo [36mfrom[0m [32m"@/assets/partners/cloudflare.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m [36mimport[0m stripeLogo [36mfrom[0m [32m"@/assets/partners/stripe.svg"[0m;
+  [90m14 |[0m
+  [90m15 |[0m [36mtype[0m [33mPartner[0m =
+
+Import map: aliased to relative './src/assets/partners/cloudflare.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:9:1
+Module not found: Can't resolve '@/assets/partners/google.svg'
+  [90m 7 |[0m [36mimport[0m mailchimpLogo [36mfrom[0m [32m"@/assets/partners/mailchimp.svg"[0m;
+  [90m 8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+  [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+  [90m12 |[0m [36mimport[0m cloudflareLogo [36mfrom[0m [32m"@/assets/partners/cloudflare.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/google.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:10:1
+Module not found: Can't resolve '@/assets/partners/hubspot.svg'
+  [90m 8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+  [90m 9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+  [90m12 |[0m [36mimport[0m cloudflareLogo [36mfrom[0m [32m"@/assets/partners/cloudflare.svg"[0m;
+  [90m13 |[0m [36mimport[0m stripeLogo [36mfrom[0m [32m"@/assets/partners/stripe.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/hubspot.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:7:1
+Module not found: Can't resolve '@/assets/partners/mailchimp.svg'
+  [90m 5 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/partners/shopify.svg"[0m;
+  [90m 6 |[0m [36mimport[0m metaLogo [36mfrom[0m [32m"@/assets/partners/meta.svg"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m mailchimpLogo [36mfrom[0m [32m"@/assets/partners/mailchimp.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+  [90m 9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+  [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/mailchimp.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:6:1
+Module not found: Can't resolve '@/assets/partners/meta.svg'
+  [90m4 |[0m
+  [90m5 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/partners/shopify.svg"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m metaLogo [36mfrom[0m [32m"@/assets/partners/meta.svg"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m mailchimpLogo [36mfrom[0m [32m"@/assets/partners/mailchimp.svg"[0m;
+  [90m8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+  [90m9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/meta.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:11:1
+Module not found: Can't resolve '@/assets/partners/microsoft.svg'
+  [90m 9 |[0m [36mimport[0m googleLogo [36mfrom[0m [32m"@/assets/partners/google.svg"[0m;
+  [90m10 |[0m [36mimport[0m hubspotLogo [36mfrom[0m [32m"@/assets/partners/hubspot.svg"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m cloudflareLogo [36mfrom[0m [32m"@/assets/partners/cloudflare.svg"[0m;
+  [90m13 |[0m [36mimport[0m stripeLogo [36mfrom[0m [32m"@/assets/partners/stripe.svg"[0m;
+  [90m14 |[0m
+
+Import map: aliased to relative './src/assets/partners/microsoft.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:5:1
+Module not found: Can't resolve '@/assets/partners/shopify.svg'
+  [90m3 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m4 |[0m
+[31m[1m>[0m [90m5 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/partners/shopify.svg"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m metaLogo [36mfrom[0m [32m"@/assets/partners/meta.svg"[0m;
+  [90m7 |[0m [36mimport[0m mailchimpLogo [36mfrom[0m [32m"@/assets/partners/mailchimp.svg"[0m;
+  [90m8 |[0m [36mimport[0m awsLogo [36mfrom[0m [32m"@/assets/partners/aws.svg"[0m;
+
+Import map: aliased to relative './src/assets/partners/shopify.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/PartnersSection.tsx:13:1
+Module not found: Can't resolve '@/assets/partners/stripe.svg'
+  [90m11 |[0m [36mimport[0m microsoftLogo [36mfrom[0m [32m"@/assets/partners/microsoft.svg"[0m;
+  [90m12 |[0m [36mimport[0m cloudflareLogo [36mfrom[0m [32m"@/assets/partners/cloudflare.svg"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m stripeLogo [36mfrom[0m [32m"@/assets/partners/stripe.svg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mtype[0m [33mPartner[0m = 
+  [90m16 |[0m   | { [36mtype[0m: [32m"image"[0m; name: string; logo: string }
+
+Import map: aliased to relative './src/assets/partners/stripe.svg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/PartnersSection.tsx [Client Component Browser]
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/PartnersSection.tsx [Client Component SSR]
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-american-koil.jpg'
+  [90m11 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+  [90m12 |[0m
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-american-koil.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:9:1
+Module not found: Can't resolve '@/assets/portfolio-american-koil.jpg'
+  [90m 7 |[0m
+  [90m 8 |[0m
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m11 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-american-koil.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:19:1
+Module not found: Can't resolve '@/assets/portfolio-beflare.jpg'
+  [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+[31m[1m>[0m [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m21 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m22 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-beflare.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:15:1
+Module not found: Can't resolve '@/assets/portfolio-beflare.jpg'
+  [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+[31m[1m>[0m [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m18 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-beflare.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:21:1
+Module not found: Can't resolve '@/assets/portfolio-ekasys-realestate.jpg'
+  [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m23 |[0m
+  [90m24 |[0m [36mconst[0m categories = [[32m"All"[0m, [32m"E-Commerce"[0m, [32m"Web App"[0m, [32m"App Development"[0m, [32m"Healthcare"[0m, [32m"ERP"[0m];
+
+Import map: aliased to relative './src/assets/portfolio-ekasys-realestate.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:18:1
+Module not found: Can't resolve '@/assets/portfolio-ekasys-realestate.jpg'
+  [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+[31m[1m>[0m [90m18 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m
+  [90m20 |[0m [36mconst[0m projects = [
+  [90m21 |[0m   {
+
+Import map: aliased to relative './src/assets/portfolio-ekasys-realestate.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:20:1
+Module not found: Can't resolve '@/assets/portfolio-ekasys-retail.jpg'
+  [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+[31m[1m>[0m [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m21 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m22 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m23 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-ekasys-retail.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:16:1
+Module not found: Can't resolve '@/assets/portfolio-ekasys-retail.jpg'
+  [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m18 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m19 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-ekasys-retail.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/ekasys-erp/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-erp.jpg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m modules = [
+  [90m16 |[0m   { icon: [33mPackage[0m, title: [32m"Inventory & Warehouse"[0m, desc: [32m"Real-time stock visibility, multi-warehouse management, automated reorder points, and batch tracking."[0m },
+
+Import map: aliased to relative './src/assets/portfolio-erp.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/ekasys-erp/page.tsx [Client Component Browser]
+    ./src/app/case-study/ekasys-erp/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/ekasys-erp/page.tsx [Client Component SSR]
+    ./src/app/case-study/ekasys-erp/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/products/page.tsx:18:1
+Module not found: Can't resolve '@/assets/portfolio-erp.jpg'
+  [90m16 |[0m
+  [90m17 |[0m [36mimport[0m portfolioHealthcare [36mfrom[0m [32m"@/assets/portfolio-healthcare.jpg"[0m;
+[31m[1m>[0m [90m18 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m
+  [90m20 |[0m [36mconst[0m products = [
+  [90m21 |[0m   {
+
+Import map: aliased to relative './src/assets/portfolio-erp.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/products/page.tsx [Client Component Browser]
+    ./src/app/products/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/products/page.tsx [Client Component SSR]
+    ./src/app/products/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:12:1
+Module not found: Can't resolve '@/assets/portfolio-erp.jpg'
+  [90m10 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m clientSalomon [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-erp.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/erp/ERPEkasys.tsx:7:1
+Module not found: Can't resolve '@/assets/portfolio-erp.jpg'
+  [90m 5 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+  [90m 6 |[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m
+  [90m 9 |[0m [36mconst[0m features = [
+  [90m10 |[0m   { icon: [33mPackage[0m, title: [32m"Inventory & Warehouse"[0m, desc: [32m"Real-time stock visibility, multi-warehouse management, and automated reorder points."[0m },
+
+Import map: aliased to relative './src/assets/portfolio-erp.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/erp/ERPEkasys.tsx [Client Component Browser]
+    ./src/app/erp-solutions/page.tsx [Client Component Browser]
+    ./src/app/erp-solutions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/erp/ERPEkasys.tsx [Client Component SSR]
+    ./src/app/erp-solutions/page.tsx [Client Component SSR]
+    ./src/app/erp-solutions/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/products/page.tsx:17:1
+Module not found: Can't resolve '@/assets/portfolio-healthcare.jpg'
+  [90m15 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+  [90m16 |[0m
+[31m[1m>[0m [90m17 |[0m [36mimport[0m portfolioHealthcare [36mfrom[0m [32m"@/assets/portfolio-healthcare.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m19 |[0m
+  [90m20 |[0m [36mconst[0m products = [
+
+Import map: aliased to relative './src/assets/portfolio-healthcare.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/products/page.tsx [Client Component Browser]
+    ./src/app/products/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/products/page.tsx [Client Component SSR]
+    ./src/app/products/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/erp/ERPMedoc.tsx:7:1
+Module not found: Can't resolve '@/assets/portfolio-healthcare.jpg'
+  [90m 5 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+  [90m 6 |[0m
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m portfolioHealthcare [36mfrom[0m [32m"@/assets/portfolio-healthcare.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m
+  [90m 9 |[0m [36mconst[0m features = [
+  [90m10 |[0m   { icon: [33mActivity[0m, title: [32m"Patient Lifecycle Management"[0m, desc: [32m"End-to-end tracking from admission to discharge with real-time status updates."[0m },
+
+Import map: aliased to relative './src/assets/portfolio-healthcare.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/erp/ERPMedoc.tsx [Client Component Browser]
+    ./src/app/erp-solutions/page.tsx [Client Component Browser]
+    ./src/app/erp-solutions/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/erp/ERPMedoc.tsx [Client Component SSR]
+    ./src/app/erp-solutions/page.tsx [Client Component SSR]
+    ./src/app/erp-solutions/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/instarunway/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-instarunway.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Multi-Language (EN/AR)"[0m, [32m"RTL Support"[0m, [32m"GCC Localization"[0m, [32m"Country Switcher"[0m, [32m"Responsive Design"[0m, [32m"SEO Optimization"[0m];
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-instarunway.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/instarunway/page.tsx [Client Component Browser]
+    ./src/app/case-study/instarunway/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/instarunway/page.tsx [Client Component SSR]
+    ./src/app/case-study/instarunway/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:16:1
+Module not found: Can't resolve '@/assets/portfolio-instarunway.jpeg'
+  [90m14 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+[31m[1m>[0m [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-instarunway.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:12:1
+Module not found: Can't resolve '@/assets/portfolio-instarunway.jpeg'
+  [90m10 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m11 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+[31m[1m>[0m [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-instarunway.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:14:1
+Module not found: Can't resolve '@/assets/portfolio-instarunway.jpeg'
+  [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+[31m[1m>[0m [90m14 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m15 |[0m [36mimport[0m clientSalomon [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m16 |[0m
+  [90m17 |[0m [36mconst[0m allCaseStudies = [
+
+Import map: aliased to relative './src/assets/portfolio-instarunway.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/judith-leiber/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-judith-leiber.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Multi-Language (EN/AR)"[0m, [32m"RTL Support"[0m, [32m"GCC Localization"[0m, [32m"Country Switcher"[0m, [32m"Responsive Design"[0m, [32m"Performance Optimization"[0m];
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-judith-leiber.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/judith-leiber/page.tsx [Client Component Browser]
+    ./src/app/case-study/judith-leiber/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/judith-leiber/page.tsx [Client Component SSR]
+    ./src/app/case-study/judith-leiber/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:17:1
+Module not found: Can't resolve '@/assets/portfolio-judith-leiber.jpeg'
+  [90m15 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+[31m[1m>[0m [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-judith-leiber.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-judith-leiber.jpeg'
+  [90m11 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-judith-leiber.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-judith-leiber.jpeg'
+  [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m15 |[0m [36mimport[0m clientSalomon [36mfrom[0m [32m"@/assets/clients/salomon.png"[0m;
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-judith-leiber.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/kat-maconie/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-kat-maconie.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Technical SEO"[0m, [32m"Schema Markup"[0m, [32m"Core Web Vitals"[0m, [32m"Content Strategy"[0m, [32m"Responsive Design"[0m];
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-kat-maconie.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/kat-maconie/page.tsx [Client Component Browser]
+    ./src/app/case-study/kat-maconie/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/kat-maconie/page.tsx [Client Component SSR]
+    ./src/app/case-study/kat-maconie/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:18:1
+Module not found: Can't resolve '@/assets/portfolio-kat-maconie.jpeg'
+  [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+[31m[1m>[0m [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m19 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m21 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-kat-maconie.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:14:1
+Module not found: Can't resolve '@/assets/portfolio-kat-maconie.jpeg'
+  [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+[31m[1m>[0m [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-kat-maconie.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:10:1
+Module not found: Can't resolve '@/assets/portfolio-kat-maconie.jpeg'
+  [90m 8 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m 9 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-kat-maconie.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/medoc-hms/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-medoc.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m modules = [
+  [90m16 |[0m   { icon: [33mFileText[0m, title: [32m"EMR"[0m, desc: [32m"Complete digital patient records — history, prescriptions, lab results, and treatment plans accessible instantly during consultations."[0m },
+
+Import map: aliased to relative './src/assets/portfolio-medoc.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/medoc-hms/page.tsx [Client Component Browser]
+    ./src/app/case-study/medoc-hms/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/medoc-hms/page.tsx [Client Component SSR]
+    ./src/app/case-study/medoc-hms/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:22:1
+Module not found: Can't resolve '@/assets/portfolio-medoc.jpeg'
+  [90m20 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+  [90m21 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+[31m[1m>[0m [90m22 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m23 |[0m
+  [90m24 |[0m [36mconst[0m categories = [[32m"All"[0m, [32m"E-Commerce"[0m, [32m"Web App"[0m, [32m"App Development"[0m, [32m"Healthcare"[0m, [32m"ERP"[0m];
+  [90m25 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-medoc.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:17:1
+Module not found: Can't resolve '@/assets/portfolio-medoc.jpeg'
+  [90m15 |[0m [36mimport[0m portfolioBeflare [36mfrom[0m [32m"@/assets/portfolio-beflare.jpg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioEkasysRetail [36mfrom[0m [32m"@/assets/portfolio-ekasys-retail.jpg"[0m;
+[31m[1m>[0m [90m17 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m18 |[0m [36mimport[0m portfolioEkasysRE [36mfrom[0m [32m"@/assets/portfolio-ekasys-realestate.jpg"[0m;
+  [90m19 |[0m
+  [90m20 |[0m [36mconst[0m projects = [
+
+Import map: aliased to relative './src/assets/portfolio-medoc.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:11:1
+Module not found: Can't resolve '@/assets/portfolio-medoc.jpeg'
+  [90m 9 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m10 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudith [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-medoc.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/moher/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-moher.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Branding & Identity"[0m, [32m"Performance Marketing"[0m, [32m"Google Ads"[0m, [32m"Meta Ads"[0m, [32m"Email Marketing"[0m, [32m"Analytics"[0m];
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-moher.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:14:1
+Module not found: Can't resolve '@/assets/portfolio-moher.jpeg'
+  [90m12 |[0m
+  [90m13 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+[31m[1m>[0m [90m14 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m15 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-moher.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:10:1
+Module not found: Can't resolve '@/assets/portfolio-moher.jpeg'
+  [90m 8 |[0m
+  [90m 9 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+[31m[1m>[0m [90m10 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m11 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-moher.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:9:1
+Module not found: Can't resolve '@/assets/portfolio-moher.jpeg'
+  [90m 7 |[0m
+  [90m 8 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+[31m[1m>[0m [90m 9 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m10 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+  [90m12 |[0m [36mimport[0m portfolioErp [36mfrom[0m [32m"@/assets/portfolio-erp.jpg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-moher.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/case-study/wilson/page.tsx:13:1
+Module not found: Can't resolve '@/assets/portfolio-wilson-new.jpeg'
+  [90m11 |[0m [36mimport[0m [33mRelatedCaseStudies[0m [36mfrom[0m [32m"@/components/RelatedCaseStudies"[0m;
+  [90m12 |[0m [36mimport[0m { useContactDialog } [36mfrom[0m [32m"@/contexts/ContactDialogContext"[0m;
+[31m[1m>[0m [90m13 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m14 |[0m
+  [90m15 |[0m [36mconst[0m techStack = [[32m"Shopify"[0m, [32m"Custom Liquid Theme"[0m, [32m"Multi-Language (EN/AR)"[0m, [32m"RTL Support"[0m, [32m"GCC Localization"[0m, [32m"Country Switcher"[0m, [32m"JavaScript"[0m, [32m"SEO Optimization"[0m, [32m"Responsive Design"[0m, [32m"...[0m
+  [90m16 |[0m
+
+Import map: aliased to relative './src/assets/portfolio-wilson-new.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/case-study/wilson/page.tsx [Client Component Browser]
+    ./src/app/case-study/wilson/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/case-study/wilson/page.tsx [Client Component SSR]
+    ./src/app/case-study/wilson/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/projects/page.tsx:15:1
+Module not found: Can't resolve '@/assets/portfolio-wilson-new.jpeg'
+  [90m13 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+[31m[1m>[0m [90m15 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m16 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m17 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m18 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-wilson-new.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/projects/page.tsx [Client Component Browser]
+    ./src/app/projects/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/projects/page.tsx [Client Component SSR]
+    ./src/app/projects/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/CaseStudiesSection.tsx:11:1
+Module not found: Can't resolve '@/assets/portfolio-wilson-new.jpeg'
+  [90m 9 |[0m [36mimport[0m portfolioAmericanKoil [36mfrom[0m [32m"@/assets/portfolio-american-koil.jpg"[0m;
+  [90m10 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m portfolioInstaRunway [36mfrom[0m [32m"@/assets/portfolio-instarunway.jpeg"[0m;
+  [90m13 |[0m [36mimport[0m portfolioJudithLeiber [36mfrom[0m [32m"@/assets/portfolio-judith-leiber.jpeg"[0m;
+  [90m14 |[0m [36mimport[0m portfolioKatMaconie [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-wilson-new.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/CaseStudiesSection.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/CaseStudiesSection.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/RelatedCaseStudies.tsx:8:1
+Module not found: Can't resolve '@/assets/portfolio-wilson-new.jpeg'
+  [90m 6 |[0m [36mimport[0m { motion } [36mfrom[0m [32m"framer-motion"[0m;
+  [90m 7 |[0m
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m portfolioWilson [36mfrom[0m [32m"@/assets/portfolio-wilson-new.jpeg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m portfolioMoher [36mfrom[0m [32m"@/assets/portfolio-moher.jpeg"[0m;
+  [90m10 |[0m [36mimport[0m portfolioKat [36mfrom[0m [32m"@/assets/portfolio-kat-maconie.jpeg"[0m;
+  [90m11 |[0m [36mimport[0m portfolioMedoc [36mfrom[0m [32m"@/assets/portfolio-medoc.jpeg"[0m;
+
+Import map: aliased to relative './src/assets/portfolio-wilson-new.jpeg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/RelatedCaseStudies.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Client Component Browser]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/RelatedCaseStudies.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Client Component SSR]
+    ./src/app/case-study/moher/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/services/page.tsx:45:1
+Module not found: Can't resolve '@/assets/services-hero.jpg'
+  [90m43 |[0m [36mimport[0m [33mTestimonialsSection[0m [36mfrom[0m [32m"@/components/TestimonialsSection"[0m;
+  [90m44 |[0m
+[31m[1m>[0m [90m45 |[0m [36mimport[0m servicesHero [36mfrom[0m [32m"@/assets/services-hero.jpg"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m46 |[0m
+  [90m47 |[0m [36mconst[0m services = [
+  [90m48 |[0m   {
+
+Import map: aliased to relative './src/assets/services-hero.jpg' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/services/page.tsx [Client Component Browser]
+    ./src/app/services/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/services/page.tsx [Client Component SSR]
+    ./src/app/services/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-bahrain/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-bahrain/page.tsx [Client Component Browser]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-bahrain/page.tsx [Client Component SSR]
+    ./src/app/shopify-bahrain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-development/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m [36mimport[0m [33mShopifyPricingPackages[0m [36mfrom[0m [32m"@/components/shopify/ShopifyPricingPackages"[0m;
+  [90m28 |[0m
+  [90m29 |[0m [90m/* ───────── inline lead form ───────── */[0m
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-development/page.tsx [Client Component Browser]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-development/page.tsx [Client Component SSR]
+    ./src/app/shopify-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-france/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-france/page.tsx [Client Component Browser]
+    ./src/app/shopify-france/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-france/page.tsx [Client Component SSR]
+    ./src/app/shopify-france/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-germany/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-germany/page.tsx [Client Component Browser]
+    ./src/app/shopify-germany/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-germany/page.tsx [Client Component SSR]
+    ./src/app/shopify-germany/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-india/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-india/page.tsx [Client Component Browser]
+    ./src/app/shopify-india/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-india/page.tsx [Client Component SSR]
+    ./src/app/shopify-india/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-italy/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-italy/page.tsx [Client Component Browser]
+    ./src/app/shopify-italy/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-italy/page.tsx [Client Component SSR]
+    ./src/app/shopify-italy/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-ksa/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-ksa/page.tsx [Client Component Browser]
+    ./src/app/shopify-ksa/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-ksa/page.tsx [Client Component SSR]
+    ./src/app/shopify-ksa/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-kuwait/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-kuwait/page.tsx [Client Component Browser]
+    ./src/app/shopify-kuwait/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-kuwait/page.tsx [Client Component SSR]
+    ./src/app/shopify-kuwait/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-netherlands/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-netherlands/page.tsx [Client Component Browser]
+    ./src/app/shopify-netherlands/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-netherlands/page.tsx [Client Component SSR]
+    ./src/app/shopify-netherlands/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-oman/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-oman/page.tsx [Client Component Browser]
+    ./src/app/shopify-oman/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-oman/page.tsx [Client Component SSR]
+    ./src/app/shopify-oman/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-qatar/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-qatar/page.tsx [Client Component Browser]
+    ./src/app/shopify-qatar/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-qatar/page.tsx [Client Component SSR]
+    ./src/app/shopify-qatar/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-south-africa/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-south-africa/page.tsx [Client Component Browser]
+    ./src/app/shopify-south-africa/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-south-africa/page.tsx [Client Component SSR]
+    ./src/app/shopify-south-africa/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-spain/page.tsx:21:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m19 |[0m [36mimport[0m { [33mArrowRight[0m, [33mCheckCircle[0m, [33mTrendingUp[0m, [33mZap[0m, [33mClock[0m, [33mBarChart3[0m, [33mRocket[0m, [33mRefreshCw[0m, [33mShoppingCart[0m, [33mPalette[0m, [33mGlobe[0m, [33mChevronRight[0m, [33mMessageCircle[0m, [33mPhone[0m, [33mSend[0m, [33mLock[0m, [33mCreditCard[0m, [33mFileCheck[0m, [33mT...[0m
+  [90m20 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m21 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m22 |[0m
+  [90m23 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m24 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m); [36mconst[0m [email, setEmail] = useState([32m""[0m); [36mconst[0m [submitted, setSubmitted] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-spain/page.tsx [Client Component Browser]
+    ./src/app/shopify-spain/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-spain/page.tsx [Client Component SSR]
+    ./src/app/shopify-spain/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/app/shopify-uae/page.tsx:26:1
+Module not found: Can't resolve '@/assets/shopify-logo.png'
+  [90m24 |[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m25 |[0m [36mimport[0m { toast } [36mfrom[0m [32m"sonner"[0m;
+[31m[1m>[0m [90m26 |[0m [36mimport[0m shopifyLogo [36mfrom[0m [32m"@/assets/shopify-logo.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m27 |[0m
+  [90m28 |[0m [36mconst[0m [33mInlineLeadForm[0m = ({ id, variant = [32m"dark"[0m }: { id: string; variant?: [32m"dark"[0m | [32m"light"[0m }) => {
+  [90m29 |[0m   [36mconst[0m [step, setStep] = useState([35m1[0m);
+
+Import map: aliased to relative './src/assets/shopify-logo.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/app/shopify-uae/page.tsx [Client Component Browser]
+    ./src/app/shopify-uae/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/shopify-uae/page.tsx [Client Component SSR]
+    ./src/app/shopify-uae/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/MobileFloatingCTA.tsx:7:1
+Module not found: Can't resolve '@/assets/whatsapp-icon.png'
+  [90m 5 |[0m [36mimport[0m { [33mPhone[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m 6 |[0m [36mimport[0m [33mContactFormDialog[0m [36mfrom[0m [32m"@/components/ContactFormDialog"[0m;
+[31m[1m>[0m [90m 7 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 8 |[0m
+  [90m 9 |[0m [36mconst[0m [33mMobileFloatingCTA[0m = () => {
+  [90m10 |[0m   [36mconst[0m [visible, setVisible] = useState([36mfalse[0m);
+
+Import map: aliased to relative './src/assets/whatsapp-icon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/MobileFloatingCTA.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/MobileFloatingCTA.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:11:1
+Module not found: Can't resolve '@/assets/whatsapp-icon.png'
+  [90m 9 |[0m
+  [90m10 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+[31m[1m>[0m [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m12 |[0m [36mimport[0m megaMenuServices [36mfrom[0m [32m"@/assets/mega-menu-services.jpg"[0m;
+  [90m13 |[0m [36mimport[0m megaMenuIndustries [36mfrom[0m [32m"@/assets/mega-menu-industries.jpg"[0m;
+  [90m14 |[0m [36mimport[0m megaMenuProducts [36mfrom[0m [32m"@/assets/mega-menu-products.jpg"[0m;
+
+Import map: aliased to relative './src/assets/whatsapp-icon.png' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve 'react-router-dom'
+  [90m 6 |[0m [36mimport[0m { [33mMenu[0m, [33mX[0m, [33mChevronDown[0m, [33mGlobe[0m, [33mSmartphone[0m, [33mCpu[0m, [33mMegaphone[0m, [33mShoppingCart[0m, [33mDatabase[0m, [33mArrowRight[0m, [33mStethoscope[0m, [33mBarChart3[0m, [33mFactory[0m, [33mTruck[0m, [33mPackage[0m, [33mActivity[0m, [33mUsers[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m 7 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m'next/link'[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m'react-router-dom'[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m
+  [90m10 |[0m [36mimport[0m globifyLogo [36mfrom[0m [32m"@/assets/globify-logo.png"[0m;
+  [90m11 |[0m [36mimport[0m whatsappIcon [36mfrom[0m [32m"@/assets/whatsapp-icon.png"[0m;
+
+
+
+Import traces:
+  Client Component Browser:
+    ./src/components/Navbar.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Client Component Browser]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/components/Navbar.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Client Component SSR]
+    ./src/app/woocommerce-development/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/not-found.tsx:2:1)
+    at <unknown> (./src/components/Navbar.tsx:2:1)
+    at <unknown> (./src/app/technology/[slug]/page.tsx:4:21)
+    at <unknown> (./src/app/sitemap.ts:13:11)
+    at <unknown> (./src/app/not-found.tsx:4:10)
+    at <unknown> (./src/app/not-found.tsx:1:10)
+    at <unknown> (./src/components/Navbar.tsx:8:10)
+    at <unknown> (./src/app/about/page.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:20:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:28:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:23:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:24:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:25:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:27:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/salomon/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:19:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/ClientsSection.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevClients.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/FAQSection.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/web-dev/WebDevLeadCapture.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Footer.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/IndustriesGridSection.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/IndustriesGridSection.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/IndustriesGridSection.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/IndustriesGridSection.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:6:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:5:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/PartnersSection.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:19:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:18:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:20:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/ekasys-erp/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/products/page.tsx:18:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/erp/ERPEkasys.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/products/page.tsx:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/erp/ERPMedoc.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/instarunway/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:16:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:12:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/judith-leiber/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/kat-maconie/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:18:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/medoc-hms/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:22:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:17:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/moher/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:14:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:10:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:9:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/case-study/wilson/page.tsx:13:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/projects/page.tsx:15:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/CaseStudiesSection.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/RelatedCaseStudies.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/services/page.tsx:45:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-bahrain/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-development/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-france/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-germany/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-india/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-italy/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-ksa/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-kuwait/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-netherlands/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-oman/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-qatar/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-south-africa/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-spain/page.tsx:21:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/app/shopify-uae/page.tsx:26:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/MobileFloatingCTA.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:11:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (./src/components/Navbar.tsx:8:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

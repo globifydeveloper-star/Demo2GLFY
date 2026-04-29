@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Prevent WhatsApp/Android WebView forced dark mode from inverting colors and breaking SVG icons */
+html, body, #root {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+/* Prevent dark mode inversion on SVG icons */
+svg {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+img {
+  forced-color-adjust: none;
+  -webkit-forced-color-adjust: none;
+}
+
+/* Google Fonts loaded via <link> in index.html for non-render-blocking loading */
+
+@layer base {
+  :root {
+    color-scheme: light;
+    /* ── 5-Color Palette ──
+       1. Orange:     #E8590C  → 20 90% 48%
+       2. Dark:       #0F1219  → 220 25% 8%
+       3. White:      #FFFFFF  → 0 0% 100%
+       4. Near-black: #171717  → 0 0% 9%
+       5. Light gray: #F5F5F5  → 0 0% 96%
+    ───────────────────────── */
+
+    --background: 0 0% 96%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 9%;
+
+    --primary: 20 90% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 9%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 85%;
+    --muted-foreground: 0 0% 20%;
+
+    --accent: 20 90% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 20 90% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 20 90% 48%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --hero-bg: 270 40% 6%;
+    --hero-foreground: 0 0% 100%;
+    --section-dark: 220 25% 8%;
+    --section-dark-foreground: 0 0% 96%;
+    --glow: 20 90% 48%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 20 90% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 9%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 20 90% 48%;
+    --chart-1: 20 90% 48%;
+    --chart-2: 20 80% 58%;
+    --chart-3: 20 70% 68%;
+    --chart-4: 20 60% 38%;
+    --chart-5: 0 0% 35%;
+    --sidebar: 0 0% 98%;
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Libre Caslon Text', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 0 0% 96%;
+    --card: 220 20% 12%;
+    --card-foreground: 0 0% 96%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 20 90% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 220 25% 8%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 20 90% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 20 90% 48%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 20 90% 48%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 20 90% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 220 25% 8%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 20 90% 48%;
+    --chart-1: 20 90% 48%;
+    --chart-2: 20 80% 58%;
+    --chart-3: 20 70% 68%;
+    --chart-4: 20 60% 38%;
+    --chart-5: 0 0% 45%;
+    --sidebar: 220 25% 8%;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 1px 2px -1px hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.1), 0 8px 10px -1px hsl(0 0% 0% / 0.1);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  /* Fix: text-muted was applying bg color (85% lightness) as text color */
+  .text-muted {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      135deg,
+      hsla(220, 25%, 8%, 0.85) 0%,
+      hsla(6, 78%, 57%, 0.3) 50%,
+      hsla(220, 25%, 8%, 0.9) 100%
+    );
+  }
+
+  .section-dark {
+    background-color: hsl(var(--section-dark));
+    color: hsl(var(--section-dark-foreground));
+  }
+
+  .glow-line {
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+}
+
+@keyframes textShimmer {
+  0% { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+.text-shimmer {
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    90deg,
+    hsl(20 90% 48%) 0%,
+    hsl(30 95% 65%) 25%,
+    hsl(40 100% 80%) 50%,
+    hsl(30 95% 65%) 75%,
+    hsl(20 90% 48%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textShimmer 4s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer {
+    animation: none !important;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Hide scrollbar for category filters */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Safe area for mobile bottom bars */
+.safe-area-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Improved touch targets - only for interactive standalone elements */
+@layer utilities {
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Boost low-opacity text for readability on dark sections */
+  [class*="text-white\\/40"] {
+    color: rgb(255 255 255 / 0.7) !important;
+  }
+  [class*="text-white\\/50"] {
+    color: rgb(255 255 255 / 0.7) !important;
+  }
+  [class*="text-hero-foreground\\/40"] {
+    color: hsl(0 0% 100% / 0.7) !important;
+  }
+}
+
+/* Focus visible for accessibility */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary rounded-sm;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-float {
+    animation: none !important;
+  }
+}
+
+/* Fix native select dropdown backgrounds on dark sections */
+select option,
+select optgroup {
+  background-color: hsl(220 25% 11%);
+  color: hsl(0 0% 90%);
+}
+
+.bg-background select option,
+.bg-card select option {
+  background-color: hsl(0 0% 98%);
+  color: hsl(0 0% 9%);
+}

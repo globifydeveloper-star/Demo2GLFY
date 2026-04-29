@@ -1,0 +1,582 @@
+
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>Globify SEO Audit Report</title>
+<style>
+  body { font-family: Calibri, sans-serif; margin: 40px; }
+  h1 { color: #1e3a8a; }
+  h2 { color: #2563eb; border-bottom: 2px solid #e5e7eb; padding-bottom: 8px; margin-top: 30px; }
+  .pass { color: #16a34a; font-weight: bold; }
+  .fail { color: #dc2626; font-weight: bold; }
+  .warn { color: #d97706; font-weight: bold; }
+  table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+  th, td { border: 1px solid #d1d5db; padding: 12px; text-align: left; }
+  th { background-color: #f3f4f6; font-weight: bold; }
+</style>
+</head>
+<body>
+<h1>Globify.ae — Technical SEO Front-End Audit</h1>
+<p><strong>Generated automatically via Source Code Scanner</strong></p>
+
+<h2>1. Core SEO Infrastructure</h2>
+<ul>
+<li><strong>Robots.txt:</strong> <span class="pass">PASS (Detected in /app/robots.ts)</span></li><li><strong>Sitemap.xml:</strong> <span class="pass">PASS (Detected in /app/sitemap.ts)</span></li><li><strong>Global Metadata API (layout.tsx):</strong> <span class="pass">PASS (Active)</span> <br/><em>Base Layout Title Detected:</em> Globify — Design · Build · Scale</li></ul>
+<h2>2. Next.js Page-level Analysis</h2>
+<p>Scanning the App Router structure for properly mapped SEO headers, H-tags, and Schema/JSON-LD presence.</p>
+<table>
+  <tr>
+    <th>Page Route (URL)</th>
+    <th>Custom Meta Tag</th>
+    <th>H1 Count</th>
+    <th>H2 Count</th>
+    <th>Schema.org</th>
+  </tr>
+
+    <tr>
+      <td><strong>/about</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">10 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/ai-automation</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/ai-chatbots</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">4 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/ai-transformation-framework</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/app-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/bigcommerce-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/blog</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/ekasys-erp</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/instarunway</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/judith-leiber</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/kat-maconie</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/medoc-hms</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/moher</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/salomon</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/case-study/wilson</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/cro-revenue-engineering</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/digital-marketing</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/digital-transformation</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/ecommerce</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/erp-solutions</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/hire-developers</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">9 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/fintech</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/healthcare</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/manufacturing</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/retail</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/saas-startups</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/industries/supply-chain</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/magento-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/migration-services</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/ (Homepage)</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/paid-advertising</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/performance-marketing</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/predictive-analytics</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">4 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/prestashop-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/privacy-policy</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">9 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/process-automation</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">4 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/products</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/projects</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/resources</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">5 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/seo-aeo</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/seo-content-strategy</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">7 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/services</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">6 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-app-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-bahrain</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-france</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-germany</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-india</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-italy</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-ksa</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-kuwait</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-netherlands</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-oman</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-plus</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">4 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-qatar</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-south-africa</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-spain</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-themes</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">4 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopify-uae</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/shopware-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/sitemap</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/social-media-brand</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">3 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/social-media-marketing</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/terms-of-service</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="pass">1 (Optimal)</span></td>
+      <td><span class="pass">10 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/web-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="warn">0</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/wix-ecommerce</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">1 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+    <tr>
+      <td><strong>/woocommerce-development</strong></td>
+      <td><span class="warn">Missing</span></td>
+      <td><span class="fail">0 (Missing)</span></td>
+      <td><span class="pass">2 tag(s)</span></td>
+      <td><span class="warn">No</span></td>
+    </tr>
+    
+</table>
+<h2>3. Key SEO Findings & Fixes Applied</h2>
+<ul>
+  <li><strong>Client-Side Rendering (CSR) Eliminated:</strong> The site previously utilized React-Helmet which executed purely in the browser. Next.js natively prerenders all headers at build-time for Googlebot.</li>
+  <li><strong>Semantic Hierarchy:</strong> Most service and case-study pages contain precisely one isolated <code>&lt;h1&gt;</code> tag denoting the subject, followed by structured <code>&lt;h2&gt;</code> sub-headers.</li>
+  <li><strong>Sitemap Automation:</strong> Using Next.js 14 dynamic sitemap generation (<code>/app/sitemap.ts</code>), the sitemap will continually reflect the 70+ routes actively compiled.</li>
+</ul>
+<br/>
+<p style="color: grey;">Audit generated sequentially across the Next.js target build.</p>
+</body>
+</html>

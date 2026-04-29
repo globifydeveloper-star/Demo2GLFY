@@ -1,0 +1,10 @@
+{
+  "permissions": {},
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "resendApiKey",
+      "environmentVariableName": "RESEND_API_KEY"
+    }
+  ]
+}
