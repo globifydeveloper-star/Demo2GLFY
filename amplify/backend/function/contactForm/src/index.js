@@ -49,7 +49,7 @@ console.log("PARSED BODY:", body);
 
     const adminEmail = resend.emails.send({
       from: "Globify Leads <noreply@globify.ae>",
-      to: "sales@globify.in",
+      to: "info@globify.in",
       subject: subjectLine,
       html: emailHtml,
     });
