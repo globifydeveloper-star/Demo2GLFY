@@ -33,8 +33,8 @@ files.forEach(file => {
         const hasPhone = /name=["']phone["']/.test(content);
         
         const hasResend = content.includes('fetch("/api/contact"') || 
-                          content.includes("fetch('/api/contact'") || 
-                          content.includes("fetch(`/api/contact`") ||
+                          content.includes("fetch('/https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com/dev/contact'") || 
+                          content.includes("fetch(`/https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com/dev/contact`") ||
                           content.includes('fetch("/api/') && content.includes('contact"');
                           
         const usesContactDialog = content.includes('useContactDialog') || content.includes('openContactDialog');

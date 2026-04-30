@@ -48,7 +48,7 @@ const AIChatbots = () => {
     setIsSubmitting(true);
     const formData = new FormData(e.currentTarget);
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com/dev/contact", {
         method: "POST",
         body: formData,
       });
