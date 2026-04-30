@@ -6,17 +6,19 @@ exports.handler = async (event) => {
   try {
 let body = {};
 
-if (event.body) {
-  try {
+try {
+  if (event.body) {
     body = typeof event.body === "string"
       ? JSON.parse(event.body)
       : event.body;
-  } catch (e) {
-    console.log("Invalid JSON:", event.body);
+  } else if (event.arguments) {
+    body = event.arguments; // fallback (Amplify sometimes uses this)
+  } else {
+    console.log("No body found, full event:", JSON.stringify(event));
   }
+} catch (e) {
+  console.log("Error parsing body:", event.body);
 }
-
-console.log("EVENT BODY:", event.body);
 console.log("PARSED BODY:", body);
     const {
       name,
