@@ -39,6 +39,7 @@ const res = await fetch("https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com
   method: "POST",
   headers: {
     "Content-Type": "application/json",
+     "Accept": "application/json",
   },
   body: JSON.stringify(data),
 });
