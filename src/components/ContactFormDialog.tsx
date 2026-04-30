@@ -69,7 +69,7 @@ const ContactFormDialog = ({
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-
+const data = Object.fromEntries(formData.entries());
     try {
       const res = await fetch("https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com/dev/contact", {
         method: "POST",
@@ -77,7 +77,7 @@ const ContactFormDialog = ({
           "Accept": "application/json",
           "Content-Type": "application/json",
         },
-        body: formData,
+        body: JSON.stringify(Object.fromEntries(formData)),
       });
 
       if (!res.ok) throw new Error("Failed to submit");
