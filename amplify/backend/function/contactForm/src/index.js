@@ -4,26 +4,22 @@ exports.handler = async (event) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    let body = {};
+let body = {};
 
-    // Safe parsing
-    try {
-      if (event.body) {
-        body =
-          typeof event.body === "string"
-            ? JSON.parse(event.body)
-            : event.body;
-      } else if (event.arguments) {
-        body = event.arguments;
-      } else {
-        console.log("No body found, full event:", JSON.stringify(event));
-      }
-    } catch (e) {
-      console.log("Error parsing body:", event.body);
-    }
-
-    console.log("PARSED BODY:", body);
-
+try {
+  if (event.body) {
+    body = typeof event.body === "string"
+      ? JSON.parse(event.body)
+      : event.body;
+  } else if (event.arguments) {
+    body = event.arguments; // fallback (Amplify sometimes uses this)
+  } else {
+    console.log("No body found, full event:", JSON.stringify(event));
+  }
+} catch (e) {
+  console.log("Error parsing body:", event.body);
+}
+console.log("PARSED BODY:", body);
     const {
       name,
       email,
@@ -35,15 +31,6 @@ exports.handler = async (event) => {
       budget,
       message,
     } = body;
-
-    // Basic validation (important)
-    if (!name || !email) {
-      return {
-        statusCode: 400,
-        headers: { "Access-Control-Allow-Origin": "*" },
-        body: JSON.stringify({ error: "Missing required fields" }),
-      };
-    }
 
     const subjectLine = "New Lead Submission - Globify.in";
 
@@ -60,58 +47,37 @@ exports.handler = async (event) => {
       <p><b>Message:</b> ${message || ""}</p>
     `;
 
-    // ✅ SEND ADMIN EMAIL (awaited)
-    const adminResponse = await resend.emails.send({
-     from: "onboarding@resend.dev",
+    const adminEmail = resend.emails.send({
+      from: "Globify Leads <noreply@globify.ae>",
       to: "sales@globify.in",
       subject: subjectLine,
       html: emailHtml,
     });
 
-    console.log("ADMIN EMAIL RESPONSE:", adminResponse);
-
-    // ❌ If Resend failed → stop here
-    if (adminResponse.error) {
-      console.error("Admin email failed:", adminResponse.error);
-
-      return {
-        statusCode: 500,
-        headers: { "Access-Control-Allow-Origin": "*" },
-        body: JSON.stringify({
-          error: "Admin email failed",
-          details: adminResponse.error.message,
-        }),
-      };
-    }
-
-    // ✅ SEND USER EMAIL (optional)
+    let userEmail = null;
     if (email) {
-      const userResponse = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      userEmail = resend.emails.send({
+        from: "Globify <noreply@globify.ae>",
         to: email,
         subject: "We've received your inquiry",
         html: `<p>Thanks ${name || "there"}, we’ll contact you soon.</p>`,
       });
-
-      console.log("USER EMAIL RESPONSE:", userResponse);
     }
 
-    // ✅ SUCCESS RESPONSE
+    await Promise.all([adminEmail, userEmail]);
+
     return {
       statusCode: 200,
       headers: { "Access-Control-Allow-Origin": "*" },
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
-    console.error("LAMBDA ERROR:", err);
+    console.error(err);
 
     return {
       statusCode: 500,
       headers: { "Access-Control-Allow-Origin": "*" },
-      body: JSON.stringify({
-        error: "Internal server error",
-        details: err.message,
-      }),
+      body: JSON.stringify({ error: "Internal server error" }),
     };
   }
 };
