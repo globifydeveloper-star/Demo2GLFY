@@ -62,7 +62,7 @@ exports.handler = async (event) => {
 
     // ✅ SEND ADMIN EMAIL (awaited)
     const adminResponse = await resend.emails.send({
-      from: "Globify Leads <noreply@globify.in>",
+      from: "Globify Leads <noreply@globify.ae>",
       to: "sales@globify.in",
       subject: subjectLine,
       html: emailHtml,
@@ -87,7 +87,7 @@ exports.handler = async (event) => {
     // ✅ SEND USER EMAIL (optional)
     if (email) {
       const userResponse = await resend.emails.send({
-        from: "Globify <noreply@globify.in>",
+        from: "Globify <noreply@globify.ae>",
         to: email,
         subject: "We've received your inquiry",
         html: `<p>Thanks ${name || "there"}, we’ll contact you soon.</p>`,
