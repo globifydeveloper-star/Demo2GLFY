@@ -57,7 +57,7 @@ console.log("PARSED BODY:", body);
     let userEmail = null;
     if (email) {
       userEmail = resend.emails.send({
-        from: "Globify <noreply@globify.ae>",
+        from: "Globify <noreply@globify.in>",
         to: email,
         subject: "We've received your inquiry",
         html: `<p>Thanks ${name || "there"}, we’ll contact you soon.</p>`,
