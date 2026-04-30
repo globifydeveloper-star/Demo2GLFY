@@ -138,7 +138,7 @@ const res = await fetch("https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com
                     <label className="text-sm font-semibold text-hero-foreground/70">How can we help? *</label>
                     <select 
                       required 
-                      name="interest" 
+                      name="service" 
                       className="w-full px-4 py-3.5 rounded-xl bg-hero-foreground/[0.04] border border-hero-foreground/[0.08] text-hero-foreground/70 text-sm focus:outline-none focus:border-primary/50 transition-colors appearance-none"
                     >
                       <option value="">Select a service</option>
