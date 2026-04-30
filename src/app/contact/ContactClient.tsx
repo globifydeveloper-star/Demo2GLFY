@@ -35,6 +35,7 @@ const ContactClient = () => {
     try {
       const data = Object.fromEntries(formData.entries());
 
+console.log("🚀 SENDING DATA:", data);
 const res = await fetch("https://0vv875sc0i.execute-api.ap-south-1.amazonaws.com/dev/contact", {
   method: "POST",
   headers: {
