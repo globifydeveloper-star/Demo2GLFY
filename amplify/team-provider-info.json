@@ -15,7 +15,7 @@
       "function": {
         "contactForm": {
           "deploymentBucketName": "amplify-globify-dev-39950-deployment",
-          "s3Key": "amplify-builds/contactForm-47787a596f52772f4d36-build.zip",
+          "s3Key": "amplify-builds/contactForm-4e4d376a594b6550394f-build.zip",
           "resendApiKey": "re_bhc4Lhfy_89yTYD8XgdbqzQq3uNnVP3ys"
         }
       },

@@ -13,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Send, Loader2 } from "lucide-react";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
 interface ContactFormDialogProps {
   open: boolean;
@@ -85,12 +85,10 @@ console.log("🚀 SENDING DATA:", data);
       if (!res.ok) throw new Error("Failed to submit");
 
       typeof window !== "undefined" && (window as any).gtag && (window as any).gtag('event', 'generate_lead');
-      toast.success("Thank you for reaching out!", {
-        description: "We'll get back to you within 24 hours.",
-      });
-      handleClose(false);
+     handleClose(false);
+window.location.href = "/thank-you";
     } catch (error) {
-      toast.error("Something went wrong. Please try again later.");
+      // toast.error("Something went wrong. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }

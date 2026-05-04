@@ -36,7 +36,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/app/contact/thankyou/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
